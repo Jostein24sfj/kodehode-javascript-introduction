@@ -16,7 +16,7 @@ Read the terminal output before and after to see the difference
 
 export function start() {
   //your code here
-  // return true
+  return true
 };
 
 /******************************************************************************
@@ -31,9 +31,13 @@ received is an even number.
 HINT: Use the modulo operator (%) Google it! 😊
 ******************************************************************************/
 
-export const oddOrEven = () => {
-  //your code here
-};
+export const oddOrEven = (num) => {
+  if (num%2 === 0) {
+    return "Even"
+  } else { 
+    return "Odd"
+  }
+}; 
 
 /******************************************************************************
 2.
@@ -47,8 +51,9 @@ Example: "This is cool" should return "THIS IS COOL!"
 
 ******************************************************************************/
 
-export function makeMeLoud() {
-  //your code here
+export function makeMeLoud(thisiscool) {
+  let result = thisiscool.toUpperCase()
+  return result + "!"
 }
 
 /******************************************************************************
@@ -72,8 +77,20 @@ The function should return:
 
 ******************************************************************************/
 
-export const greeter = () => {
-  //your code here
+export const greeter = (navn, hour) => {
+  if (hour <= 0) {
+    return "Invalid time"
+  } else if (hour >= 0 && hour <= 5 ) {
+return `Good night ${navn}`
+  } else if (hour >= 6 && hour <= 11) {
+return `Good morning ${navn}`
+  } else if (hour >= 12 && hour <= 17) {
+    return `Good day ${navn}`
+  } else if (hour >= 18 && hour <= 23) {
+    return `Good evening ${navn}`
+  } else if (hour > 23) {
+    return "Invalid time"}
+
 };
 
 /******************************************************************************
